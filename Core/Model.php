@@ -5,7 +5,11 @@ use PDO;
 
 abstract class Model {
 
-
+/**
+ * connect to database using PDO here is using single tone design pattern
+ * @staticvar type $db
+ * @return PDO
+ */
     protected static function getDB()
     {
         static $db = null;
@@ -18,8 +22,7 @@ abstract class Model {
 
             try {
                 $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8",$username , $password);
-             //   $stmt = $db->query('select id , title , content , created_at from posts order  by created_at');
-              //  $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+             
                 return $db;
             }catch (PDOException $e)
             {

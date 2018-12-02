@@ -13,7 +13,9 @@ class Users extends \Core\Controller
 
  
     
-    
+    /**
+     * get all posts in admin dashboard
+     */
     
      public function index ()
     {
@@ -24,7 +26,9 @@ class Users extends \Core\Controller
     
     
 
-
+/**
+ * login the admin
+ */
     public function login ()
     {
     
@@ -46,7 +50,9 @@ class Users extends \Core\Controller
         View::render('admin/index.php');
     }
     
-    
+    /**
+     * logout the admin
+     */
     public function logout ()
     {
         session_start();

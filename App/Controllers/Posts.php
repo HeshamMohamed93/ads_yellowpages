@@ -26,7 +26,9 @@ class Posts extends \Core\Controller {
     }
    
       
-
+/**
+ * create new post
+ */
     
     public function create() 
     {
@@ -44,7 +46,9 @@ class Posts extends \Core\Controller {
          }
     }
     
-    
+    /**
+     * show post and comments by post id
+     */
     public function show() 
     {
       
@@ -56,7 +60,9 @@ class Posts extends \Core\Controller {
 
     }
 
-
+/**
+ * insert new post
+ */
     public function edit() 
     {
          if($this->validateSession() == true){
@@ -73,7 +79,9 @@ class Posts extends \Core\Controller {
          }
 
     }
-    
+    /**
+     * delete post
+     */
     public function delete()
     {
         if($this->validateSession()){
@@ -86,7 +94,9 @@ class Posts extends \Core\Controller {
     }
     
     
-    
+    /**
+     * update post
+     */
     public function update() 
     {
        
@@ -96,7 +106,7 @@ class Posts extends \Core\Controller {
         $tmp_name = $_FILES['photo']['tmp_name'];
         $location = "../public/images/";
         move_uploaded_file($tmp_name, $location.$filename);
-        echo $filename;
+        
 
         $post = Post::update_post($_POST['title'], $filename , $_POST['id']);
         

@@ -64,7 +64,10 @@ abstract class Controller
     {
     }
     
-    
+    /**
+     * validate if this user is admin to canuse this method in create or delete posts and some other admin stuff 
+     * @return boolean
+     */
     public function validateSession()
     {
         session_start();

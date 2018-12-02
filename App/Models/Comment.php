@@ -50,7 +50,7 @@ class Comment extends \Core\Model {
      */
     public static function getCommentById($post_id) {
 
-        // construct SQL insert statement
+       
         try {
             $db = static::getDB();
             $stmt = $db->prepare('select comment , username , created_at from comments where comments.status = 1 and comments.post_id = :postid');
@@ -63,10 +63,15 @@ class Comment extends \Core\Model {
         }
     }
 
+    /**
+     * update the comment status change it to 1 if it's confirmed by admin
+     * @param type $id
+     * @return boolean
+     */
     public static function update_comment_status($id) {
 
 
-        // construct SQL insert statement
+        
         $db = static::getDB();
         $sql = "UPDATE comments SET status = 1   where id=?";
         $stmt = $db->prepare($sql);
@@ -82,10 +87,15 @@ class Comment extends \Core\Model {
         }
     }
 
+    /**
+     * get comments based on it's status 0 if not confirmed and 1 if confirmed 
+     * @param int $status
+     * @return type
+     */
     public static function get_comment_status($status) {
 
 
-        // construct SQL insert statement
+        
         try {
             $db = static::getDB();
             $stmt = $db->prepare('select id , comment , username , created_at from comments where comments.status = :status');

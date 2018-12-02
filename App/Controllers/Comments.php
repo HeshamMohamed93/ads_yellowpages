@@ -26,7 +26,9 @@ class Comments extends \Core\Controller {
     }
     
     
-    
+    /**
+     * add new post
+     */
     
     public function add() 
     {
@@ -38,7 +40,9 @@ class Comments extends \Core\Controller {
 
     }
     
-    
+    /**
+     * get non confirmed comments
+     */
     public function nonconfirmed() 
     {
      
@@ -50,7 +54,9 @@ class Comments extends \Core\Controller {
 
     }
     
-    
+    /**
+     * confirm comments by admin
+     */
     public function confirm() 
     {
      
@@ -66,8 +72,10 @@ class Comments extends \Core\Controller {
     }
     
     
-    
-    public function deleteAction()
+    /**
+     * delete comment by admin
+     */
+    public function delete()
     {
         
         if($this->validateSession()){

@@ -15,20 +15,10 @@ use \Core\View;
  */
 class Home extends \Core\Controller {
     
-//    protected function before ()
-//    {
-//        echo "beforesssssssssss";
-//     //   return false;
-//    }
 
-
-//    protected function after ()
-//    {
-//        echo "after";
-//       // return true;
-//    }
-
-
+/**
+     * home page with posts
+     */
      public function index ()
     {
        $posts = Post::getAll();
