@@ -1,3 +1,4 @@
+<?php
 class PostFactory
 {
     public static function create($route_params)
@@ -5,3 +6,4 @@ class PostFactory
         return new Posts($route_params);
     }
 }
+?>
