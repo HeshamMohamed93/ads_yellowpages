@@ -46,7 +46,7 @@ class Comment extends \Core\Model {
      * get comment by post id
      * 
      * @param type $post_id
-     * @return type
+     * @return array with the comment
      */
     public static function getCommentById($post_id) {
 
@@ -90,7 +90,7 @@ class Comment extends \Core\Model {
     /**
      * get comments based on it's status 0 if not confirmed and 1 if confirmed 
      * @param int $status
-     * @return type
+     * @return array of commments
      */
     public static function get_comment_status($status) {
 
@@ -114,7 +114,7 @@ class Comment extends \Core\Model {
 /**
  * delete post using post id
  * @param int $id
- * @return type
+ * @return array
  */
 public static function delete($id)
     {
