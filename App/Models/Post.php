@@ -10,7 +10,7 @@ class Post extends \Core\Model {
     /**
      * get all posts
      * 
-     * @return array
+     * @return array of posts
      */
     public static function getAll()
     {
@@ -32,7 +32,7 @@ class Post extends \Core\Model {
      * get post by id
      * 
      * @param int $id
-     * @return array
+     * @return array of post 
      */
     public static function getbyID($id)
     {
@@ -110,7 +110,7 @@ class Post extends \Core\Model {
 /**
  * delete post using post id
  * @param int $id
- * @return type
+ * @return array
  */
 public static function delete($id)
     {
